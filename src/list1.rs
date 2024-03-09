@@ -141,7 +141,7 @@ impl<T> IntoIterator for List<T> {
     }
 }
 
-impl <T> Drop for List<T> {
+impl<T> Drop for List<T> {
     fn drop(&mut self) {
         let mut node = self.head.take();
         while let Some(mut p) = node {
